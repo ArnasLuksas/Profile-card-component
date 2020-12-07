@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+
+:root {
+  /* Primary */
+  --Dark-cyan: hsl(185, 75%, 39%);
+  --Very-dark-desaturated-blue: hsl(229, 23%, 23%);
+  --Dark-grayish-blue: hsl(227, 10%, 46%);
+
+  /* Neutral  */
+  --Dark-gray: hsl(0, 0%, 59%);
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  box-sizing: border-box;
+  font-family: "Kumbh Sans", sans-serif;
+}
+
+body {
+  background-image: url("../images/bg-pattern-top.svg"),
+    url("../images/bg-pattern-bottom.svg");
+  background-color: var(--Dark-cyan);
+  background-position: right 180px top -400px, left 170px bottom -380px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 375px;
+}
+.container {
+  margin: 20px;
+  background-color: #fff;
+  border-radius: 20px;
+}
+
+/* header */
+header {
+  padding: 70px 0;
+  display: flex;
+  justify-content: center;
+  background-image: url("../images/bg-pattern-card.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+header img {
+  border-radius: 100%;
+  position: absolute;
+  bottom: -50px;
+  border: 4px solid white;
+}
+
+/* main */
+main {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2, auto);
+  grid-template-areas:
+    "name"
+    "stats";
+}
+.name {
+  grid-area: name;
+  border-bottom: 1px solid var(--Dark-gray);
+}
+.stats {
+  grid-area: stats;
+}
+
+.name h1 {
+  font-size: 18px;
+  text-align: center;
+  padding-top: 60px;
+}
+.name span {
+  color: var(--Dark-gray);
+  font-weight: 400;
+}
+.name p {
+  text-align: center;
+  color: var(--Dark-gray);
+  padding-bottom: 1em;
+}
+
+.stats {
+  display: flex;
+  padding: 14px 0 7px 0;
+  list-style: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.stats li {
+  text-align: center;
+  width: 70px;
+  margin: 0px 5px;
+  line-height: 1.2em;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.stats span {
+  font-size: 0.6em;
+  font-weight: 400;
+  color: var(--Dark-gray);
+}
+/* attribution footer */
+.attribution {
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  text-align: center;
+  width: 100%;
+  padding: 10px;
+}
+/* media queries */
+@media screen and (min-width: 1440px) {
+  body {
+    background-position: right 1000px bottom 300px, left 950px bottom -600px;
+    background-size: 60%, 60%;
+  }
+}
